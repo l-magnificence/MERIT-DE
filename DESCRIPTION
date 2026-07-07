@@ -22,3 +22,4 @@ Imports: edgeR, limma, stats
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 RoxygenNote: 7.3.1
+Maintainer: Hongwei Liu <l_magnificence@126.com>
