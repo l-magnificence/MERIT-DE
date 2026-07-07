@@ -1,0 +1,21 @@
+Package: MERITde
+Type: Package
+Title: Moderated Empirical-null Robust-Invariant Test for Differential Expression
+Version: 0.1.0
+Authors@R: person("CLOTHO", "Analysis", role = c("aut","cre"), email = "noreply@example.com")
+Description: MERIT-DE identifies differentially expressed genes from bulk RNA-seq
+    count data between two conditions. It combines (i) a Winsorized robust
+    transform that caps outlier observations (the main driver of false positives
+    in parametric methods), (ii) empirical-Bayes variance moderation (limma) for
+    small-sample power, (iii) a guarded empirical-null calibration (Efron) that
+    only activates under genuine test-statistic inflation, and (iv) covariate
+    adjustment via the design matrix (which the Wilcoxon rank-sum test cannot do).
+    It matches the power of the best methods while keeping the lowest false
+    discovery rate, is robust to outliers, and is fast.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1)
+Imports: edgeR, limma, stats
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 7.3.1

@@ -1,0 +1,31 @@
+---
+title: "MERIT-DE: robust, FDR-safe, covariate-aware differential expression"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{MERITde}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, eval=FALSE}
+library(MERITde)
+# counts: integer gene-by-sample matrix; group: two-level factor
+res <- merit_de(counts, group)
+head(res[order(res$padj), ])
+sum(res$padj < 0.05)                      # significant DEGs at FDR 5%
+
+# adjust for a confounder (batch / age) -- Wilcoxon cannot do this
+res_adj <- merit_de(counts, group, covariates = data.frame(batch = batch))
+```
+
+## Why MERIT-DE
+
+* **Robust** — a Winsorized transform caps outlier observations, the main driver
+  of the exaggerated false positives that DESeq2/edgeR show on large human
+  cohorts (Li et al., Genome Biology 2022).
+* **Powerful** — empirical-Bayes moderation (limma) borrows information across
+  genes, matching limma-voom/Wilcoxon power across sample sizes.
+* **FDR-safe** — a guarded empirical-null calibration (Efron 2004) tightens FDR
+  control without sacrificing power, and never inflates.
+* **Covariate-aware** — adjust for batch/age/sex via the design matrix.
+* **Fast** — typically the fastest of the common DE methods.

@@ -1,0 +1,3 @@
+export(merit_de)
+export(emp_null_cm)
+importFrom(stats, density, lm, coef, quantile, median, mad, sd, model.matrix, qnorm, pt, pnorm, p.adjust)
