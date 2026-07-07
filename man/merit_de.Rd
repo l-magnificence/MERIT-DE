@@ -11,6 +11,7 @@ empirical-null calibration.}
 \item{counts}{integer gene-by-sample count matrix.}
 \item{group}{two-level factor of conditions.}
 \item{covariates}{optional confounders to adjust for.}
+\item{transform}{"winsor" (default, robust + powerful) or "rint" (rank-INT).}
 }
 \value{data.frame with gene, stat, pvalue, padj.}
 \examples{\dontrun{merit_de(counts, group)}}
