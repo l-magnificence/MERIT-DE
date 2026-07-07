@@ -5,7 +5,8 @@ Version: 0.1.0
 Authors@R: c(
     person(given="Wei", family = "Zhang", "xxx", role = c("cre", "aut")),
     person(given="CLOTHO",family="CLOTHO",  "xxx", role =  "aut"),
-    person(given="Hongwei", family = "Liu",  "xxx", role = "aut"))
+    person(given="Hongwei", family = "Liu",  "xxx", role = "aut"),
+)
 Description: MERIT-DE identifies differentially expressed genes from bulk RNA-seq
     count data between two conditions. It combines (i) a Winsorized robust
     transform that caps outlier observations (the main driver of false positives
