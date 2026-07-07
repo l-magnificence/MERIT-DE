@@ -11,7 +11,6 @@ empirical-null calibration.}
 \item{counts}{integer gene-by-sample count matrix (rows = genes).}
 \item{group}{factor/vector of length ncol(counts) with exactly two levels.}
 \item{covariates}{optional data.frame/vector of confounders to adjust for.}
-\item{covariates}{optional data.frame/vector of confounders to adjust fr.}
 #\item{transform}{"winsor" (default, robust + powerful) or "rint" (rank-INT).}
 #\item{winsor_C}{Winsorization width in MAD units (default 2.5).}
 #\item{mode}{"guard" (default), "base" (no empirical null), or "full".}
