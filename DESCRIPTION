@@ -2,9 +2,10 @@ Package: MERITde
 Type: Package
 Title: Moderated Empirical-null Robust-Invariant Test for Differential Expression
 Version: 0.1.0
-Authors@R: person("Wei", "Zhang", , "xxx", role = c("cre", "aut")),
-    person("Hongwei", "Liu", , "xxx", role = "aut"),
-    person("CLOTHO", , "xxx", role = "aut"),
+Authors@R: c(
+    person("Wei", "Zhang", , "xxx", role = c("cre", "aut")),
+    person("Hongwei", "Liu", , "xxx", role = c("cre", "aut")),
+    person("CLOTHO", , "xxx", role = c("cre", "aut")))
 Description: MERIT-DE identifies differentially expressed genes from bulk RNA-seq
     count data between two conditions. It combines (i) a Winsorized robust
     transform that caps outlier observations (the main driver of false positives
