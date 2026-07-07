@@ -8,9 +8,9 @@ empirical-null calibration.}
   winsor_C = 2.5, mode = c("guard","base","full"), N_MIN = 20, TRIGGER = 1.5,
   SIGMA_CAP = 1.5, filtered = FALSE)}
 \arguments{
-\item{counts}{integer gene-by-sample count matrix (rows = genes).}
-\item{group}{factor/vector of length ncol(counts) with exactly two levels.}
-\item{covariates}{optional data.frame/vector of confounders to adjust for.}
+\item{counts}{integer gene-by-sample count matrix.}
+\item{group}{two-level factor of conditions.}
+\item{covariates}{optional confounders to adjust for.}
 }
 \value{data.frame with gene, stat, pvalue, padj.}
 \examples{\dontrun{merit_de(counts, group)}}
